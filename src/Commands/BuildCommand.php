@@ -51,7 +51,7 @@ class BuildCommand extends Command
                 'NATIVEPHP_APP_VERSION' => config('nativephp.version'),
                 'NATIVEPHP_APP_FILENAME' => Str::slug(config('app.name')),
                 'NATIVEPHP_APP_AUTHOR' => config('nativephp.author'),
-                'NATIVEPHP_UPDATER_CONFIG' => config('nativephp.updater.enabled', false) ? json_encode(Updater::builderOptions()) : '{}',
+                'NATIVEPHP_UPDATER_CONFIG' => config('nativephp.updater.enabled', false) ? json_encode(Updater::builderOptions()) : null,
             ],
             Updater::environmentVariables(),
         );
