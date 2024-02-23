@@ -30,7 +30,7 @@ if (isDarwin) {
 }
 
 
-let updaterConfig = {};
+let updaterConfig = null;
 
 console.log("Arch: ", process.arch)
 console.log("Platform: ", process.platform)
@@ -38,7 +38,7 @@ try {
     updaterConfig = process.env.NATIVEPHP_UPDATER_CONFIG;
     updaterConfig = JSON.parse(updaterConfig);
 } catch (e) {
-    updaterConfig = {};
+    updaterConfig = null;
 }
 
 if (isBuilding) {
