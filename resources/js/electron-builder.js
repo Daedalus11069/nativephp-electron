@@ -16,6 +16,8 @@ const isWindows = process.argv.includes('--win');
 const isLinux = process.argv.includes('--linux');
 const isDarwin = process.argv.includes('--mac');
 
+const platformIsWin = process.platform === "win32";
+
 let targetOs;
 
 if (isWindows) {
@@ -106,7 +108,7 @@ if (isBuilding) {
         console.log('=====================');
 
         // We'll use the default PHP binary here, as we can cross-compile for all platforms
-        execSync(`php ${join(__dirname, 'resources', 'app', 'artisan')} native:minify ${join(__dirname, 'resources', 'app')}`);
+        execSync(`php${platformIsWin ? ".exe" : ""} ${join(__dirname, 'resources', 'app', 'artisan')} native:minify ${join(__dirname, 'resources', 'app')}`);
     } catch (e) {
         console.error('=====================');
         console.error('Error copying app to resources');
