@@ -30,7 +30,7 @@
     "@electron-toolkit/preload": "^1.0.3",
     "@electron-toolkit/utils": "^1.0.2",
     "@electron/remote": "^2.0.9",
-    "@nativephp/electron-plugin": "github:Daedalus11069/electron-plugin#0.3.1"
+    "@nativephp/electron-plugin": "github:Daedalus11069/electron-plugin#7d5ff93f1f62cea34fb5c44e8b93a6fe7aa1b256"
   },
   "devDependencies": {
     "@electron/notarize": "^1.2.3",
